@@ -1,0 +1,349 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label {
+    color: #cbd1e0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 75px);
+    margin-top: 75px;
+}
+
+@media (max-width: 576px) {
+    main {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.container {
+    position: relative;
+    background: #000000;
+    padding: 20px 20px 20px;
+    margin: 40px;
+    width: 400px;
+    border-radius: 25px;
+    border-color: #cbd1e0;
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+        margin: 30px 5%;
+    }
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #cbd1e0, #cbd1e0);
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.form-label {
+    display: block;
+    margin: 3% 0 5%;
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+.radio-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: #cbd1e0 solid 1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.radio-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.radio-wrapper label {
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    cursor: pointer;
+    color: #cbd1e0;
+    border-right: #cbd1e0 1px solid;
+    transition: background-color .05s ease-out;
+}
+
+.radio-wrapper label:last-child {
+    border: none;
+}
+
+.radio-wrapper label:hover {
+    background: rgb(118, 108, 163);
+}
+
+.radio-wrapper label:active {
+    background: rgb(118, 108, 163);
+}
+
+.radio-wrapper input:checked + label {
+    background: rgb(118, 108, 163);
+}
+.checkbox-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: #cbd1e0 solid 1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.checkbox-wrapper label {
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    cursor: pointer;
+    color: #cbd1e0;
+    border-right: #cbd1e0 1px solid;
+    transition: background-color .05s ease-out;
+
+}
+
+.checkbox-wrapper label:last-child {
+    border: none;
+}
+
+.checkbox-wrapper label:hover {
+    background: rgb(118, 108, 163);
+}
+
+.checkbox-wrapper label:active {
+    background: rgb(118, 108, 163);
+}
+
+.checkbox-wrapper input:checked + label {
+    background: rgb(118, 108, 163);
+}
+
+.text-field-wrapper input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 1% 3%;
+    font-size: 16px;
+    background: transparent;
+    color: #cbd1e0;
+    border: 1px solid #cbd1e0;
+    outline: none;
+    border-radius: 15px;
+}
+
+.text-field-wrapper input[type="text"].wrong {
+    border-color: #82231F;
+    color: #EE8277;
+}
+
+.text-field-wrapper input[type="text"].correct {
+    border-color: #cbd1e0;
+    color: #cbd1e0;
+}
+
+.text-field-wrapper input[type="text"]:focus {
+    border-color: rgb(118, 108, 163);
+    color: #cbd1e0;
+}
+
+.text-field-wrapper input[type="text"].wrong:focus {
+    border-color: #A7322C;
+    color: #F3A59B;
+}
+
+.text-field-wrapper input[type="text"].correct:focus {
+    border-color: #cbd1e0;
+    color: #cbd1e0;
+}
+
+/* ===== Оформление кнопок ===== */
+.btns-block {
+    display: flex;
+    margin: 7% 0 3%;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 7px 20px;
+    margin: 2px 10px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #31373C;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn.btn-block {
+    width: 100%;
+}
+
+.btn.primary {
+    color: #cbd1e0;
+    border-color: #cbd1e0;
+}
+
+.btn.primary:hover {
+    color: #cbd1e0;
+    border-color: #cbd1e0;
+    box-shadow: 0 0 15px #cbd1e0;
+    text-shadow: 0 0 5px #cbd1e0;
+}
+
+.btn.primary:active {
+    color: #cbd1e0;
+    background-color: #8C939D;
+    text-shadow: none;
+}
+
+.btn.primary:disabled {
+    color: #6d6f75;
+    border-color: #6d6f75;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.btn.secondary {
+    color: #cbd1e0;
+    border-color: #cbd1e0;
+}
+
+.btn.secondary:hover {
+    color: #cbd1e0;
+    border-color: #cbd1e0;
+    box-shadow: 0 0 15px #6F7680;
+    text-shadow: 0 0 5px #6F7680;
+}
+
+.btn.secondary:active {
+    color: #f2f6fb;
+    background-color: #8C939D;
+    text-shadow: none;
+}
+
+/* ===== Оформление SVG ===== */
+
+.graph svg {
+    width: 500px;
+    height: 500px;
+}
+
+@media (max-width: 576px) {
+    .graph svg {
+        width: 90%;
+        height: 90%;
+        margin: 0 5%;
+    }
+}
+
+.graph svg .figure,
+.graph svg .coordinate-line,
+.graph svg .coordinates {
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-dashoffset: 0;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.graph svg .figure {
+    fill: #544b70;
+    stroke-width: 0;
+}
+
+.graph svg .coordinate-line {
+    stroke: #c4cad8;
+    stroke-width: 2;
+    fill-opacity: 0;
+}
+
+.graph svg .coordinates {
+    fill: #c4cad8;
+    stroke: none;
+    stroke-width: 1;
+    white-space: pre;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    padding: 6px 20px;
+    font-size: 16px;
+    color: #c4cad8;
+    background: #000000;
+    border-bottom: #c4cad8;
+    box-shadow: 0 0 25px #c4cad8;
+    z-index: 100;
+}
+/* ===== Оформление таблицы ===== */
+.result_table {
+    width: 100%;
+    font-size: 100%;
+    text-align: center;
+    font-style: normal;
+    color: #c4cad8;
+    background-color: #000000;
+    border: solid #c4cad8;
+    border-radius: 5px;
+    border-spacing: 15px;
+}
+
+.vars_table {
+    margin: auto;
+}
+
+#time {
+    color: #c4cad8;
+}
+
+#y {
+    color: #c4cad8;
+}

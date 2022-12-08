@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: artemiy
+Build-Jdk: BellSoft Liberica version 18.0.2
+Specification-Title: Quickstart: labtwo
+Specification-Version: 27.0.0.Final-SNAPSHOT
+Implementation-Title: Quickstart: labtwo
+Implementation-Version: 27.0.0.Final-SNAPSHOT
+Implementation-Vendor-Id: org.wildfly.quickstarts
+Implementation-URL: https://github.com/wildfly/wildfly-quickstart-parent
+ /labtwo
+Java-Version: 18.0.2.1
+Java-Vendor: BellSoft
+Os-Name: Mac OS X
+Os-Arch: x86_64
+Os-Version: 13.0.1
+Scm-Url: http://github.com/jboss/jboss-parent-pom/wildfly-quickstart-par
+ ent/labtwo
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/wildfl
+ y-quickstart-parent/labtwo
+Scm-Revision: 
+
