@@ -52,22 +52,5 @@ task copyWebApp(type: Copy){
     into "$rootDir/backend/build/resourses/main/static/."
 }
 
-//bootJar {
-//    manifest {
-//        attributes 'Start-Class': 'ru.senina.itmo.weblab4.BackendApplication'
-//    }
-//}
-/*
-sourceSets {
-    main {
-
-        resources {
-            srcDir 'src/main/resources'
-            include '*.properties'
-            //output.resourcesDir = 'build/resources/main'
-        }
-    }
-}*/
-
 bootJar.dependsOn(copyWebApp)
 compileJava.dependsOn ":frontend:build"
