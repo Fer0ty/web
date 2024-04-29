@@ -28,7 +28,7 @@
         <version>2</version>
         <relativePath/>
     </parent>
-    <artifactId>labtwo</artifactId>
+    <artifactId>lab2</artifactId>
     <version>27.0.0.Final-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Quickstart: labtwo</name>
